@@ -15,8 +15,31 @@ li{
   font-family: 'Roboto', sans-serif;
   color: rgb(0, 0, 0);
 }
+button{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+}  
+p span {
+    display: block;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card_description{
+    font-family: 'Roboto', sans-serif;
+    padding: 2px 16px;
+}
+/* Main page content container */
 .container{
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 5px;
@@ -41,29 +64,48 @@ li{
   /* row start/column start/ row end/ column end */
   grid-area: hd;
   font-family: 'Roboto', sans-serif;
-}
-.footer{
-  grid-area: ft;  
-  font-family: 'Roboto', sans-serif;
-}
-.sidebar{
-  grid-area: left;
-  font-family: 'Roboto', sans-serif;
+  order: 1;
 }
 .content{
-  grid-area: right;
+    grid-area: top;
+    font-family: 'Roboto', sans-serif;
+    order: 2;
+  }
+.author{
+  grid-area: auth;
   font-family: 'Roboto', sans-serif;
+  padding: 5px;
+  gap: 5px;
+  order: 3;
 }
+.sharing{
+    grid-area: share;
+    font-family: 'Roboto', sans-serif;
+    order: 4;
+}
+.external_links{
+    grid-area: links;
+    font-family: 'Roboto', sans-serif;
+    order: 5;
+}
+.footer{
+    grid-area: ft;  
+    font-family: 'Roboto', sans-serif;
+    order: 6;
+  }
 
 /* If Screen Is Wide Enough */
 @media(min-width:500px){
 .container{
       display:grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-template-rows: auto;
       grid-template-areas: 
       "hd hd"
-      "left right"
+      "top top"
+      "auth auth"
+      "share share"
+      "links links"
       "ft ft";
       /*border: 2px solid red;*/
   }

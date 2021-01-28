@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+h1{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(116, 4, 4);
+}
+h2{
+  font-family: 'Roboto', sans-serif;
+  color: brown;
+}
+h3{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(41, 41, 41);
+}
+li{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+}
+button{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+}  
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card_description{
+    font-family: 'Roboto', sans-serif;
+    padding: 2px 16px;
+}
+/* Main page content container */
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  /*border: 2px solid yellow;*/
+}
+/* add css for nested grid here */
+#nested_grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-gap: 10px;
+  grid-template-areas:
+    "one two"
+    "three four";
+}
+.box{
+    /*border: 1px solid red;*/
+    background: #ffffff;
+    }
+.page_header{
+  /* row start/column start/ row end/ column end */
+  grid-area: hd;
+  font-family: 'Roboto', sans-serif;
+}
+.footer{
+  grid-area: ft;  
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar{
+  grid-area: left;
+  font-family: 'Roboto', sans-serif;
+  padding: 5px;
+  gap: 5px;
+}
+.content{
+  grid-area: right;
+  font-family: 'Roboto', sans-serif;
+}
+.external_links{
+    grid-area: links;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* If Screen Is Wide Enough */
+@media(min-width:500px){
+.container{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "hd hd"
+      "left left"
+      "right right"
+      "links links"
+      "ft ft";
+      /*border: 2px solid red;*/
+  }
+}
