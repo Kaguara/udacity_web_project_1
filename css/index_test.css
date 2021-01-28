@@ -21,7 +21,7 @@ li{
   justify-content: space-evenly;
   padding: 5px;
   font-family: 'Roboto', sans-serif;
-  border: 2px solid yellow;
+  /*border: 2px solid yellow;*/
 }
 /* add css for nested grid here */
 #nested_grid{
@@ -34,7 +34,7 @@ li{
     "three four";
 }
 .box{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     background: #ffffff;
     }
 .page_header{
@@ -62,9 +62,9 @@ li{
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       grid-template-areas: 
-      "hd hd hd hd hd hd hd hd"
-      "left left left left right right right right"
-      "ft ft ft ft ft ft ft ft";
-      border: 2px solid red;
+      "hd hd"
+      "left right"
+      "ft ft";
+      /*border: 2px solid red;*/
   }
 }
