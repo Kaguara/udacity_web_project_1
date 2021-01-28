@@ -1,14 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+h1{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(116, 4, 4);
+}
+h2{
+  font-family: 'Roboto', sans-serif;
+  color: brown;
+}
+h3{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(41, 41, 41);
+}
+li{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+}
 .container{
-  display:grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 250px 600px;
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* Initially each element has its own row for small screens */
-  grid-template-areas: 
-  "hd"
-  "sd"
-  "main"
-  "ft";
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
   border: 2px solid yellow;
 }
 /* add css for nested grid here */
@@ -16,49 +28,42 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
-  grid-margin: 10px;
+  grid-gap: 10px;
   grid-template-areas:
     "one two"
     "three four";
 }
-#box_one{
-  grid-area: one;
-}
-#box_two{
-  grid-area: two;
-}
-#box_three{
-  grid-area: three;
-}
-#box_four{
-  grid-area: four;
-}
 .box{
     border: 1px solid red;
-    background: #F8FA9D;
+    background: #ffffff;
     }
-  .header{
-    /* row start/column start/ row end/ column end */
-    grid-area:hd;
-  }
-  .footer{
-    grid-area: ft;  
-  }
-  .sidebar{
-    grid-area: sd;
-  }
-  .content{
-    grid-area: main;
-  }
+.page_header{
+  /* row start/column start/ row end/ column end */
+  grid-area: hd;
+  font-family: 'Roboto', sans-serif;
+}
+.footer{
+  grid-area: ft;  
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar{
+  grid-area: left;
+  font-family: 'Roboto', sans-serif;
+}
+.content{
+  grid-area: right;
+  font-family: 'Roboto', sans-serif;
+}
+
 /* If Screen Is Wide Enough */
 @media(min-width:500px){
 .container{
       display:grid;
-      grid-template-columns: 300px 300px 300px;
-      grid-template-rows: 250px 600px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
       grid-template-areas: 
       "hd hd hd hd hd hd hd hd"
-      "sd sd main main main main main main"
+      "left left left left right right right right"
       "ft ft ft ft ft ft ft ft";
       border: 2px solid red;
   }
