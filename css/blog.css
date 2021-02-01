@@ -34,6 +34,21 @@ button{
     font-family: 'Roboto', sans-serif;
     padding: 2px 16px;
 }
+#logo{
+  width: 150px;
+  height: 150px;
+}
+#author_avatar{
+  width: 50px;
+  height: 50px;
+}
+.blog_icon{
+  width: 10%;
+}
+.social_icon{
+  width: 20px; 
+  height: 20px;
+}
 /* Main page content container */
 .container{
   display: flex;

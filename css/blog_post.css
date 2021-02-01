@@ -37,6 +37,13 @@ p span {
     font-family: 'Roboto', sans-serif;
     padding: 2px 16px;
 }
+#article_logo{
+  width: 80%;
+  height: auto;
+}
+.blog_icon{
+  width: 10%;
+}
 /* Main page content container */
 .container{
   display: flex;

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('blog.css');
+@import url('blog_post.css');
 h1{
   font-family: 'Roboto', sans-serif;
   color: rgb(116, 4, 4);
@@ -20,9 +21,13 @@ button{
   font-family: 'Roboto', sans-serif;
   color: rgb(0, 0, 0);
 }
+#logo{
+  width: 150px;
+  height: 150px;
+}
 /* Main page content container */
 .container{
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 5px;
@@ -47,22 +52,27 @@ button{
   /* row start/column start/ row end/ column end */
   grid-area: hd;
   font-family: 'Roboto', sans-serif;
+  order: 1;
 }
 .footer{
   grid-area: ft;  
   font-family: 'Roboto', sans-serif;
+  order: 5;
 }
 .sidebar{
   grid-area: left;
   font-family: 'Roboto', sans-serif;
+  order: 3;
 }
 .content{
   grid-area: right;
   font-family: 'Roboto', sans-serif;
+  order: 2;
 }
 .external_links{
   grid-area: links;
   font-family: 'Roboto', sans-serif;
+  order: 4;
 }
 
 /* If Screen Is Wide Enough */
